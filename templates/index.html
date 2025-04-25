@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1 class="logo-heading">Video <span>Cutter</span></h1>
+
+    <div class="container">
+        <h1>Upload Video to Generate 40s Clips</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="file-input">
+            <button id="upload-btn">Upload</button>
+        </div>
+
+        <div id="progress-container" style="display: none;">
+            <p>Processing: <span id="progress-text">0%</span></p>
+            <div id="progress-bar"></div>
+        </div>
+
+        <br>
+        <h2 style="text-align: center;">Download Clips</h2>
+        <div id="clips-container" style="display: none;">
+            <div id="download-buttons"></div>
+        </div>
+    </div>
+
+    <footer class="developer-credit">
+        <p>Designed & Developed by <span class="dev-name">Dev Teotia</span></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
